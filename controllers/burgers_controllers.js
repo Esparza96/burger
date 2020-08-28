@@ -17,7 +17,7 @@ router.get("/", function(req, res) {
 });
 
 router.post("/api/burgers", function(req, res) {
-  cat.create([
+  burger.create([
     "burger_name", "devoured"
   ], [
     req.body.burger_name, false
@@ -35,12 +35,7 @@ router.put("/api/burgers/:id", function(req, res) {
   burger.update({
     devoured:true
   }, condition, function(result) {
-    if (result.changedRows == 0) {
-     
-      return res.status(404).end();
-    } else {
-      res.status(200).end();
-    }
+   res.status(200).end();
   });
 })
 module.exports = router
