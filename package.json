@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "main": "server.js",
+  "engines": {"node":"12.18.3"},
   "scripts": {
     "dev": "react-scripts start",
     "start": "serve -s build",
